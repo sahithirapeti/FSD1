@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Looping Through Data</title>
+</head>
+<body>
+
+<h2>for-in Loop</h2>
+
+<script>
+    // Object
+    let student = {
+        name: "Ravi",
+        age: 20,
+        course: "BCA"
+    };
+
+    // for-in loop
+    for (let key in student) {
+        document.write(key + " : " + student[key] + "<br>");
+    }
+
+    document.write("<h2>forEach Loop</h2>");
+
+    // Array
+    let subjects = ["JavaScript", "HTML", "CSS"];
+
+    subjects.forEach(function(subject) {
+        document.write(subject + "<br>");
+    });
+
+    document.write("<h2>for-of Loop</h2>");
+
+    // for-of loop
+    for (let subject of subjects) {
+        document.write(subject + "<br>");
+    }
+</script>
+
+</body>
+</html>
