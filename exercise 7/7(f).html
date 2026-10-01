@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RegExp Object</title>
+</head>
+<body>
+
+<h2>RegExp Object</h2>
+
+<script>
+    let pattern = /JavaScript/i;
+    let text = "I am learning JavaScript";
+
+    // Method
+    document.write("Test Result: " +
+                   pattern.test(text) + "<br>");
+
+    // Match method
+    document.write("Match Result: " +
+                   text.match(pattern) + "<br><br>");
+
+    // Properties
+    document.write("Pattern: " +
+                   pattern.source + "<br>");
+
+    document.write("Flags: " +
+                   pattern.flags);
+</script>
+
+</body>
+</html>
