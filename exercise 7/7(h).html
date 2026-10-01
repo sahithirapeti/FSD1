@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Defined Object</title>
+</head>
+<body>
+
+<h2>User Defined Object</h2>
+
+<p id="output"></p>
+
+<script>
+
+    // Constructor
+    function Student(name, age, marks) {
+
+        // Properties
+        this.name = name;
+        this.age = age;
+        this.marks = marks;
+
+        // Method
+        this.display = function() {
+            return "Name: " + this.name +
+                   "<br>Age: " + this.age +
+                   "<br>Marks: " + this.marks;
+        };
+
+        // Getter
+        Object.defineProperty(this, "result", {
+
+            get: function() {
+                if (this.marks >= 40) {
+                    return "Pass";
+                } else {
+                    return "Fail";
+                }
+            },
+
+            // Setter
+            set: function(value) {
+                this.marks = value;
+            }
+        });
+    }
+
+    // Creating object
+    let student = new Student("Ravi", 20, 85);
+
+    // Display
+    document.getElementById("output").innerHTML =
+        student.display() +
+        "<br>Result: " + student.result;
+
+</script>
+
+</body>
+</html>
